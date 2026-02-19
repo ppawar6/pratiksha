@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-      - HW03a_Mocking
+      - HW03aMocking
   pull_request:
     branches:
       - main
-      - HW03a_Mocking
+      - HW03aMocking
 
 jobs:
   build:
