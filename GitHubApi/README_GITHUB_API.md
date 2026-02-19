@@ -1,5 +1,6 @@
 # GitHub API Assignment
-[![Python CI](https://github.com/ppawar6/pratiksha/actions/workflows/ci.yml/badge.svg)](https://github.com/ppawar6/pratiksha/actions/workflows/ci.yml)
+[![Python CI](https://github.com/ppawar6/pratiksha/actions/workflows/ci.yml/badge.svg?branch=HW03aMocking)](https://github.com/ppawar6/pratiksha/actions/workflows/ci.yml?query=branch%3AHW03aMocking)
+
 
 ## Overview
 This program retrieves repository information and commit counts for a GitHub user using the public GitHub REST API.

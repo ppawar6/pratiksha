@@ -1,12 +1,12 @@
 import pytest
 from unittest.mock import patch, MagicMock
-from github_api import get_repo_info
+from GitHubApi.github_api import get_repo_info
 
 
 class TestGetRepoInfo:
     """Test suite for get_repo_info function"""
     
-    @patch("github_api.requests.get")
+    @patch("GitHubApi.github_api.requests.get")
     def test_valid_user(self, mock_get):
         """Test retrieving repos and commits for a valid user"""
         # Mock repos response
@@ -33,7 +33,7 @@ class TestGetRepoInfo:
         assert result == [("repo1", 3), ("repo2", 1)]
         assert mock_get.call_count == 3
     
-    @patch("github_api.requests.get")
+    @patch("GitHubApi.github_api.requests.get")
     def test_invalid_user(self, mock_get):
         """Test handling of non-existent user (404 response)"""
         repos_response = MagicMock()
@@ -44,7 +44,7 @@ class TestGetRepoInfo:
         
         assert result == []
     
-    @patch("github_api.requests.get")
+    @patch("GitHubApi.github_api.requests.get")
     def test_empty_repo_list(self, mock_get):
         """Test user with no repositories"""
         repos_response = MagicMock()
@@ -56,7 +56,7 @@ class TestGetRepoInfo:
         
         assert result == []
     
-    @patch("github_api.requests.get")
+    @patch("GitHubApi.github_api.requests.get")
     def test_api_error(self, mock_get):
         """Test handling of API errors (500 response)"""
         repos_response = MagicMock()
@@ -67,7 +67,7 @@ class TestGetRepoInfo:
         
         assert result == []
     
-    @patch("github_api.requests.get")
+    @patch("GitHubApi.github_api.requests.get")
     def test_request_exception(self, mock_get):
         """Test handling of network/request exceptions"""
         import requests
@@ -77,7 +77,7 @@ class TestGetRepoInfo:
         
         assert result == []
     
-    @patch("github_api.requests.get")
+    @patch("GitHubApi.github_api.requests.get")
     def test_commit_api_error(self, mock_get):
         """Test handling when commits API returns error"""
         repos_response = MagicMock()
