@@ -1,4 +1,5 @@
 # GitHub API Assignment
+[![Python CI](https://github.com/ppawar6/pratiksha/actions/workflows/ci.yml/badge.svg)](https://github.com/ppawar6/pratiksha/actions/workflows/ci.yml)
 
 ## Overview
 This program retrieves repository information and commit counts for a GitHub user using the public GitHub REST API.
