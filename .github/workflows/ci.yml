@@ -2,9 +2,13 @@ name: Python CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - HW03a_Mocking
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+      - HW03a_Mocking
 
 jobs:
   build:
