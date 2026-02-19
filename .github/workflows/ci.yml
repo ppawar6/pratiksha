@@ -24,5 +24,4 @@ jobs:
 
       - name: Run tests
         run: |
-          cd GitHubApi
-          pytest test_github_api.py -v
+          pytest GitHubApi/test_github_api.py -v

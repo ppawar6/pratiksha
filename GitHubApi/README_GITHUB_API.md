@@ -22,6 +22,7 @@ pip install requests pytest
 
 ### Running the program
 ```bash
+cd GitHubApi
 python github_api.py
 ```
 Enter a GitHub username when prompted. The program will display all repositories and their commit counts.
@@ -36,12 +37,23 @@ Repo: subsurface-for-dirk Number of commits: 2102
 
 ### Running tests
 ```bash
+pytest GitHubApi/test_github_api.py -v
+```
+
+Or from the GitHubApi directory:
+```bash
+cd GitHubApi
 pytest test_github_api.py -v
 ```
 
-To run with coverage:
+To run with coverage from project root:
 ```bash
 pip install pytest-cov
+pytest GitHubApi/test_github_api.py --cov=GitHubApi.github_api -v
+```
+
+Or from GitHubApi directory:
+```bash
 pytest test_github_api.py --cov=github_api -v
 ```
 
